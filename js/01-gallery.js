@@ -33,9 +33,9 @@ function handlerClickGallery(evt) {
     const instance = basicLightbox.create(
         `<img src="${evt.target.dataset.source}" 
         width='1300' height='900' >`,
-        {
-            onShow: handlerEscapeModal,
-            onClose: handlerEscapeModal
+            {
+            onShow:  () => { document.addEventListener('keydown', handlerEscapeModal) },
+            onClose: () => { document.removeEventListener('keydown', handlerEscapeModal) }
         })
     instance.show()
 
