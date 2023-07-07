@@ -35,7 +35,7 @@ function handlerClickGallery(evt) {
         width='1300' height='900' >`,
         {
             onShow: handlerEscapeModal,
-            onClose: handlerEscapeModal,
+            onClose: handlerEscapeModal
         })
     instance.show()
 
