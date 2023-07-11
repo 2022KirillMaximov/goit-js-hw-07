@@ -21,12 +21,15 @@ function createMarkuo(arr) {
 gallery.insertAdjacentHTML('afterbegin', createMarkuo(galleryItems));
 
 
+
 gallery.addEventListener('click', handlerClickGallery)
+
+
 
 function handlerClickGallery(evt) {
     evt.preventDefault();
-    if (evt.target.classList.contains('gallery__image')) {
-        console.log('gallery__image', evt.target)
+    if (!evt.target.classList.contains('gallery__image')) {
+        return
     }
 
 
